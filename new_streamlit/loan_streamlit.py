@@ -7,8 +7,10 @@ import pickle
 # LOAD MODEL
 # ==========================================
 
-model = joblib.load("loan_model.pkl")
+# model = joblib.load("loan_model.pkl")
+MODEL_PATH = Path(__file__).parent / "loan_model.pkl"
 
+model = joblib.load(MODEL_PATH)
 
 # ==========================================
 # PAGE CONFIG
