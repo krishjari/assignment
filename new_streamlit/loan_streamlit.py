@@ -49,145 +49,145 @@ col1, col2, col3 = st.columns(3)
 # COLUMN 1
 # ------------------------------------------
 
-# with col1:
+with col1:
 
-#     no_of_dependents = st.number_input(
-#         "Number of Dependents",
-#         min_value=0,
-#         max_value=20,
-#         value=2
-#     )
+    no_of_dependents = st.number_input(
+        "Number of Dependents",
+        min_value=0,
+        max_value=20,
+        value=2
+    )
 
-#     income_annum = st.number_input(
-#         "Annual Income",
-#         min_value=0,
-#         value=500000,
-#         step=10000
-#     )
+    income_annum = st.number_input(
+        "Annual Income",
+        min_value=0,
+        value=500000,
+        step=10000
+    )
 
-#     loan_amount = st.number_input(
-#         "Loan Amount",
-#         min_value=0,
-#         value=500000,
-#         step=10000
-#     )
+    loan_amount = st.number_input(
+        "Loan Amount",
+        min_value=0,
+        value=500000,
+        step=10000
+    )
 
-#     loan_term = st.number_input(
-#         "Loan Term",
-#         min_value=1,
-#         max_value=50,
-#         value=10
-#     )
-
-
-# # ------------------------------------------
-# # COLUMN 2
-# # ------------------------------------------
-
-# with col2:
-
-#     cibil_score = st.number_input(
-#         "CIBIL Score",
-#         min_value=0,
-#         max_value=900,
-#         value=700
-#     )
-
-#     residential_assets_value = st.number_input(
-#         "Residential Assets Value",
-#         min_value=0,
-#         value=500000,
-#         step=10000
-#     )
-
-#     commercial_assets_value = st.number_input(
-#         "Commercial Assets Value",
-#         min_value=0,
-#         value=200000,
-#         step=10000
-#     )
-
-#     luxury_assets_value = st.number_input(
-#         "Luxury Assets Value",
-#         min_value=0,
-#         value=300000,
-#         step=10000
-#     )
+    loan_term = st.number_input(
+        "Loan Term",
+        min_value=1,
+        max_value=50,
+        value=10
+    )
 
 
-# # ------------------------------------------
-# # COLUMN 3
-# # ------------------------------------------
+# ------------------------------------------
+# COLUMN 2
+# ------------------------------------------
 
-# with col3:
+with col2:
 
-#     bank_asset_value = st.number_input(
-#         "Bank Asset Value",
-#         min_value=0,
-#         value=200000,
-#         step=10000
-#     )
+    cibil_score = st.number_input(
+        "CIBIL Score",
+        min_value=0,
+        max_value=900,
+        value=700
+    )
 
-#     education = st.selectbox(
-#         "Education",
-#         ["Graduate", "Not Graduate"]
-#     )
+    residential_assets_value = st.number_input(
+        "Residential Assets Value",
+        min_value=0,
+        value=500000,
+        step=10000
+    )
 
-#     self_employed = st.selectbox(
-#         "Self Employed",
-#         ["Yes", "No"]
-#     )
+    commercial_assets_value = st.number_input(
+        "Commercial Assets Value",
+        min_value=0,
+        value=200000,
+        step=10000
+    )
+
+    luxury_assets_value = st.number_input(
+        "Luxury Assets Value",
+        min_value=0,
+        value=300000,
+        step=10000
+    )
 
 
-# st.divider()
+# ------------------------------------------
+# COLUMN 3
+# ------------------------------------------
+
+with col3:
+
+    bank_asset_value = st.number_input(
+        "Bank Asset Value",
+        min_value=0,
+        value=200000,
+        step=10000
+    )
+
+    education = st.selectbox(
+        "Education",
+        ["Graduate", "Not Graduate"]
+    )
+
+    self_employed = st.selectbox(
+        "Self Employed",
+        ["Yes", "No"]
+    )
 
 
-# # ==========================================
-# # PREDICTION BUTTON
-# # ==========================================
+st.divider()
 
-# if st.button(
-#     "🔍 Predict Loan Status",
-#     use_container_width=True
-# ):
 
-#     # --------------------------------------
-#     # CREATE DATAFRAME
-#     # --------------------------------------
+# ==========================================
+# PREDICTION BUTTON
+# ==========================================
 
-#     input_data = pd.DataFrame(
-#         {
-#             "no_of_dependents": [no_of_dependents],
+if st.button(
+    "🔍 Predict Loan Status",
+    use_container_width=True
+):
 
-#             "education": [education],
+    # --------------------------------------
+    # CREATE DATAFRAME
+    # --------------------------------------
 
-#             "self_employed": [self_employed],
+    input_data = pd.DataFrame(
+        {
+            "no_of_dependents": [no_of_dependents],
 
-#             "income_annum": [income_annum],
+            "education": [education],
 
-#             "loan_amount": [loan_amount],
+            "self_employed": [self_employed],
 
-#             "loan_term": [loan_term],
+            "income_annum": [income_annum],
 
-#             "cibil_score": [cibil_score],
+            "loan_amount": [loan_amount],
 
-#             "residential_assets_value": [
-#                 residential_assets_value
-#             ],
+            "loan_term": [loan_term],
 
-#             "commercial_assets_value": [
-#                 commercial_assets_value
-#             ],
+            "cibil_score": [cibil_score],
 
-#             "luxury_assets_value": [
-#                 luxury_assets_value
-#             ],
+            "residential_assets_value": [
+                residential_assets_value
+            ],
 
-#             "bank_asset_value": [
-#                 bank_asset_value
-#             ]
-#         }
-#     )
+            "commercial_assets_value": [
+                commercial_assets_value
+            ],
+
+            "luxury_assets_value": [
+                luxury_assets_value
+            ],
+
+            "bank_asset_value": [
+                bank_asset_value
+            ]
+        }
+    )
 
 
 #     # --------------------------------------
