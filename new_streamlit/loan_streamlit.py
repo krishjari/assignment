@@ -24,30 +24,30 @@ st.set_page_config(
 )
 
 
+==========================================
+TITLE
+==========================================
+
+st.title("💰 Loan Approval Prediction")
+
+st.write(
+    "Enter applicant information to predict loan approval."
+)
+
+
+st.divider()
+
+
 # ==========================================
-# TITLE
+# INPUTS
 # ==========================================
 
-# st.title("💰 Loan Approval Prediction")
-
-# st.write(
-#     "Enter applicant information to predict loan approval."
-# )
+col1, col2, col3 = st.columns(3)
 
 
-# st.divider()
-
-
-# # ==========================================
-# # INPUTS
-# # ==========================================
-
-# col1, col2, col3 = st.columns(3)
-
-
-# # ------------------------------------------
-# # COLUMN 1
-# # ------------------------------------------
+# ------------------------------------------
+# COLUMN 1
+# ------------------------------------------
 
 # with col1:
 
