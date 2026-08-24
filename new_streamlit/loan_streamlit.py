@@ -190,31 +190,31 @@ if st.button(
     )
 
 
-#     # --------------------------------------
-#     # PREDICT
-#     # --------------------------------------
+    # --------------------------------------
+    # PREDICT
+    # --------------------------------------
 
-#     prediction = model.predict(input_data)[0]
-
-
-#     # --------------------------------------
-#     # RESULT
-#     # --------------------------------------
-
-#     st.subheader("Prediction Result")
+    prediction = model.predict(input_data)[0]
 
 
-#     if prediction == "Approved":
+    # --------------------------------------
+    # RESULT
+    # --------------------------------------
 
-#         st.success(
-#             "✅ Loan Approved"
-#         )
+    st.subheader("Prediction Result")
 
-#     else:
 
-#         st.error(
-#             "❌ Loan Rejected"
-#         )
+    if prediction == "Approved":
+
+        st.success(
+            "✅ Loan Approved"
+        )
+
+    else:
+
+        st.error(
+            "❌ Loan Rejected"
+        )
 
 
 #     # --------------------------------------
