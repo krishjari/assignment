@@ -217,13 +217,13 @@ if st.button(
         )
 
 
-#     # --------------------------------------
-#     # SHOW INPUT
-#     # --------------------------------------
+    # --------------------------------------
+    # SHOW INPUT
+    # --------------------------------------
 
-#     with st.expander("View Applicant Information"):
+    with st.expander("View Applicant Information"):
 
-#         st.dataframe(
-#             input_data,
-#             use_container_width=True
-#         )
+        st.dataframe(
+            input_data,
+            use_container_width=True
+        )
