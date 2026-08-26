@@ -1,14 +1,17 @@
 import streamlit as st
 import pandas as pd
 import joblib
-
+import pickle
+from pathlib import Path
 
 # ==========================================
 # LOAD MODEL
 # ==========================================
 
-model = joblib.load("loan_model.pkl")
+# model = joblib.load("loan_model.pkl")
+MODEL_PATH = Path(__file__).parent / "loan_model.pkl"
 
+model = joblib.load(MODEL_PATH)
 
 # ==========================================
 # PAGE CONFIG
